@@ -22,8 +22,8 @@ Given that I have a list of qualifying loans, when I choose to save the loans, t
 Given that I’m using the loan qualifier CLI, when I choose to save the loans, then the tool should save the results as a CSV file.
 
 ## New Functionality Adds
-> New additions to the code include 
-'''def save_qualifying_loans(qualifying_loans):
+New additions to the code include:
+>'''def save_qualifying_loans(qualifying_loans):
     saves_loan = questionary.confirm("Do you want to save your qualifying loans?").ask()
     file_path = questionary.text("Enter a file path to save qualifying loans:").ask()
     file_path = Path(file_path)
