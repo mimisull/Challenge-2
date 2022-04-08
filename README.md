@@ -33,6 +33,11 @@ New additions to the code include:
 
 What this functionality serves is prompting the user for not only do they want to save their file, but where would they like to save it. This helps users organize themselves and makes sure the code doesn't just default to downloads like many applications do. This streamlines the process for the user.
 
+>'''if len(bank_data_filtered) == 0:
+        sys.exit("No qualifying loans, exiting.")'''
+
+Updated system exit if 0 loan qualifiers to complete: Given that no qualifying loans exist, when prompting a user to save a file, then the program should notify the user and exit.
+
 ## Usage
 The project works by asking the user for their loan data, then asking for all the relevant information to pull any loans that they qualifier for based on their (bank_data, credit_score, debt, income, loan, home_value). Then, it prompts them to ask if they would like to save their file, and where they would like to save it.
 
