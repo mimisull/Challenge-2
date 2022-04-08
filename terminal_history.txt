@@ -1,0 +1,42 @@
+    1  word
+    2  x=2
+    3  x
+    4  x=
+    5  =x
+    6  ls -al ~/.ssh
+    7  git clone https://github.com/mimisull/Challenge-2.git
+    8  git push challenge 2
+    9  cd desktop
+   10  cd challenges
+   11  cd challenge 2
+   12  ls
+   13  cd 'challenge 2'
+   14  ls
+   15  cd starter_code
+   16  ls
+   17  cd loan_qualifier app
+   18  cd loan_qualifier_app
+   19  ls
+   20  cd challenge-2
+   21  ls
+   22  git status
+   23  git add README.md
+   24  status
+   25  git status
+   26  git commit -m "added a description and usage examples of the new functionality."
+   27  git status
+   28  git push
+   29  git pull origin master
+   30  gi pull origin main
+   31  git pull origin main
+   32  git status
+   33  git push
+   34  python app.py
+   35  ls
+   36  import fire
+   37  git import fire
+   38  git status
+   39  cd ..
+   40  ls
+   41  python app.py
+   42  history 50 > terminal_history.txt
