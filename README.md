@@ -7,10 +7,10 @@ The Directory for this respoitory is:
 [TerminalHistory](https://github.com/mimisull/Challenge-2/blob/main/terminal_history.txt)
 **Challenge activity 2 Loan Analyzer**
 > Specifically, BizOps wants to know if this software can prompt the user to save the qualifying loans as a new CSV file.
-*User Story*
+*User Story*:
 As a user, I need the ability to save the qualifying loans to a CSV file so that I can share the results as a spreadsheet.
 
-*Acceptance Criteria*
+*Acceptance Criteria*:
 Given that I’m using the loan qualifier CLI, when I run the qualifier, then the tool should prompt the user to save the results as a CSV file.
 
 Given that no qualifying loans exist, when prompting a user to save a file, then the program should notify the user and exit.
