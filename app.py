@@ -101,13 +101,9 @@ def find_qualifying_loans(bank_data, credit_score, debt, income, loan, home_valu
 
     if len(bank_data_filtered) == 0:
         sys.exit("No qualifying loans, exiting.")
-    
     return bank_data_filtered
 
-def save_csv(bank_data_filtered):
-    if len(bank_data_filtered) == 0:
-        print("No qualifying loans, exiting.")
-    return save_csv(qualifying_loans)
+
 def save_qualifying_loans(qualifying_loans):
     """Saves the qualifying loans to a CSV file.   
     Args:
@@ -117,13 +113,17 @@ def save_qualifying_loans(qualifying_loans):
     import questionary
 
     saves_loan = questionary.confirm("Do you want to save your qualifying loans?").ask()
-
-    file_path = questionary.text("Enter a file path to save qualifying loans:").ask()
-    file_path = Path(file_path)
-    if not file_path.exists():
-        sys.exit(f"Oops! Can't find this path: {file_path}")
-
-    return save_qualifying_loans(file_path)
+    if saves_loan:
+        if len(qualifying_loans) == 0:
+            print("No qualifying loans.")
+        file_path = questionary.text("Enter a file path to save qualifying loans:").ask()
+        file_path = Path(file_path)
+        if not file_path.exists():
+            sys.exit(f"Oops! Can't find this path.")
+    elif print("Okay, have a good day."):
+        output_path = Path(csvpath)
+    
+#updated functionality to make sure that if you don't save the loan, it has a response and says okay have a good day before exiting.
 #asks for file path, uses DRY, prompts users fo rmore information
 
 
