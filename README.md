@@ -24,12 +24,19 @@ Given that I’m using the loan qualifier CLI, when I choose to save the loans, 
 ## New Functionality Adds
 New additions to the code include:
 >'''def save_qualifying_loans(qualifying_loans):
+  
+    import questionary
+
     saves_loan = questionary.confirm("Do you want to save your qualifying loans?").ask()
-    file_path = questionary.text("Enter a file path to save qualifying loans:").ask()
-    file_path = Path(file_path)
-    if not file_path.exists():
-        sys.exit(f"Oops! Can't find this path: {file_path}")
-    return save_qualifying_loans(file_path)'''
+    if saves_loan:
+        if len(qualifying_loans) == 0:
+            print("No qualifying loans.")
+        file_path = questionary.text("Enter a file path to save qualifying loans:").ask()
+        file_path = Path(file_path)
+        if not file_path.exists():
+            sys.exit(f"Oops! Can't find this path.")
+    elif print("Okay, have a good day."):
+        output_path = Path(csvpath)'''
 
 What this functionality serves is prompting the user for not only do they want to save their file, but where would they like to save it. This helps users organize themselves and makes sure the code doesn't just default to downloads like many applications do. This streamlines the process for the user.
 
